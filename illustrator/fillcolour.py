@@ -16,6 +16,6 @@ class FillColourScriptGen:
         
         Script = "var lyr = app.activeDocument.layers.getByName('" + self.layername + "');\n"
         Script += "var col = new CMYKColor(); \ncol.black=" + black + ";\ncol.cyan=" + cyan + ";\ncol.magenta=" + magenta + ";\ncol.yellow=" + yellow + ";\n"
-        Script += "lyr.pathItems[0].filled=true;\n"
-        Script += "lyr.pathItems[0].fillColor=col;\n"
+        Script += "lyr.pageItems[0].filled=true;\n"
+        Script += "lyr.pageItems[0].fillColor=col;\n"
         return Script
